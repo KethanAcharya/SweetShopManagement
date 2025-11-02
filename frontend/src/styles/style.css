@@ -1,0 +1,265 @@
+/* ================================
+   🍬 SWEET SHOP GLOBAL STYLES
+   ================================ */
+
+/* ==== Reset & Base ==== */
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #f9fafc;
+  color: #222;
+}
+
+h1, h2, h3 {
+  color: #ff4081;
+  font-weight: 600;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logout-btn {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.logout-btn:hover {
+  background-color: #dc2626;
+}
+
+
+button {
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+/* ==== Layout ==== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+/* ==== Auth Forms (Login & Register) ==== */
+.auth-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fff3f8, #fce4ec);
+}
+
+.auth-card {
+  width: 340px;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.auth-card h2 {
+  margin-bottom: 20px;
+  color: #ff4081;
+}
+
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.auth-card input,
+.auth-card select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 14px;
+}
+
+.auth-card input:focus,
+.auth-card select:focus {
+  border-color: #ff80ab;
+  box-shadow: 0 0 5px #ff80ab4a;
+}
+
+.auth-card button {
+  background-color: #ff4081;
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+.auth-card button:hover {
+  background-color: #e73370;
+}
+
+.auth-card p {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #555;
+}
+
+.auth-card p span {
+  color: #ff4081;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* ==== Dashboard ==== */
+.dashboard-container {
+  padding: 40px 20px;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.dashboard-header h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.dashboard-header p {
+  color: gray;
+}
+
+.add-form {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-form form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.add-form input {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 160px;
+  font-size: 14px;
+}
+
+.add-form button {
+  background-color: #ff4081;
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 8px;
+}
+
+.add-form button:hover {
+  background-color: #e73370;
+}
+
+/* ==== Sweet Cards ==== */
+.sweets-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.sweet-card {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 300px;
+  transition: transform 0.2s ease;
+}
+
+.sweet-card:hover {
+  transform: translateY(-4px);
+}
+
+.sweet-card h3 {
+  margin-top: 0;
+  color: #ff4081;
+}
+
+.sweet-card p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.sweet-card button {
+  background-color: #ff4081;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+.sweet-card button:hover {
+  background-color: #e73370;
+}
+
+.sweet-card button[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.sweet-card .btn-delete {
+  background-color: #f44336;
+}
+
+.sweet-card .btn-delete:hover {
+  background-color: #d32f2f;
+}
+
+/* ==== Forms inside Cards (Edit / Purchase) ==== */
+.inline-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.inline-form input {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.inline-form button {
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  background-color: #ff4081;
+  color: white;
+  margin-top: 6px;
+}
+
+.inline-form button:hover {
+  background-color: #e73370;
+}
